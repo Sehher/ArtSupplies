@@ -25,7 +25,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "products",method = RequestMethod.POST)
-    public Products addNote(@RequestBody Products products){
+    public Products addProduct(@RequestBody Products products){
             return pr.saveAndFlush(products);
     }
 
