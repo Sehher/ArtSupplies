@@ -1,6 +1,6 @@
-//package com.qa.controller;
-//
-//
+package com.qa.controller;
+
+
 //import com.qa.controllers.HomeController;
 //import com.qa.repository.ProductRepository;
 //import org.junit.Test;
@@ -25,7 +25,7 @@
 //public class HomeControllerTest {
 //
 //    @InjectMocks
-//    private HomeControllerController notesController;
+//    private HomeController homeController;
 //
 //    @Mock
 //    private ProductRepository repository;

@@ -29,10 +29,10 @@ public class HomeController {
             return pr.saveAndFlush(products);
     }
 
-//    @RequestMapping(value = "notes/{id}",method = RequestMethod.GET)
-//    public Products getProduct(@PathVariable Long id){
-//        return ProductRepository.findOne(id);
-//    }
+    @RequestMapping(value = "products/{id}",method = RequestMethod.GET)
+    public Products getProduct(@PathVariable Long id){
+        return ProductRepository.findOne(id);
+    }
 
     //DeleteProduct
     @RequestMapping(value = "product/{id}", method = RequestMethod.DELETE)
