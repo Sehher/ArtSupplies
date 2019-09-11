@@ -31,7 +31,7 @@ public class HomeController {
 
     @RequestMapping(value = "products/{id}",method = RequestMethod.GET)
     public Products getProduct(@PathVariable Long id){
-        return ProductRepository.findOne(id);
+        return pr.findOne(id);
     }
 
     //DeleteProduct
