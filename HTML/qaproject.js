@@ -6,6 +6,6 @@ req.onload = () => {
     document.getElementById("Name").innerHTML = data[0].name;
     document.getElementById("Category").innerHTML = data[0].category;
     document.getElementById("Description").innerHTML = data[0].description;
-
+//
 }
 req.send();
