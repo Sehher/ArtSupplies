@@ -49,27 +49,28 @@ function printCard(request) {
     list.innerHTML="";
     for(let product of products){
         let productElement = document.createElement("div");
-        productElement.setAttribute("className", "card");
+        productElement.setAttribute("class", "card");
 
         let horizontalCard = document.createElement("div");
-        horizontalCard.setAttribute("className","card-horizontal");
+        horizontalCard.setAttribute("class","card-horizontal");
 
         let imageWrapper = document.createElement("div");
-        imageWrapper.setAttribute("className","img-square-wrapper");
+        imageWrapper.setAttribute("class","img-square-wrapper");
 
         let image = document.createElement("img");
+        image.setAttribute("class", "productImage");
         image.src = product.imageUrl;
 
         imageWrapper.appendChild(image)
 
         let cardBody = document.createElement("div");
-        cardBody.setAttribute("className","card-body");
+        cardBody.setAttribute("class","card-body");
 
         let cardTitle = document.createElement("h4");
         cardTitle.innerText = product.name;
 
         let itemDescriptions = document.createElement("ul");
-        itemDescriptions.setAttribute("className", "list-group");
+        itemDescriptions.setAttribute("class", "list-group");
 
         let category = document.createElement("li");
         category.setAttribute("class", "list-group-item");
@@ -92,14 +93,14 @@ function printCard(request) {
 
 
         let cardFooter = document.createElement("div");
-        cardFooter.setAttribute("className","card-footer");
+        cardFooter.setAttribute("class","card-footer");
         let button = document.createElement("button");
         button.type = "button";
-        button.setAttribute("className", "btn-success");
+        button.setAttribute("class", "btn-success");
         button.setAttribute("onclick", "deleteProduct("+product.id+")")
 
         let header5 = document.createElement("h5");
-        header5.setAttribute("className", "added")
+        header5.setAttribute("class", "added")
         header5.innerText = "-";
 
         button.appendChild(header5);
@@ -132,5 +133,30 @@ function deleteProduct(id){
     httpRequest(method, URL, callback, headers);
 }
 
+
+function createProduct(event){
+    let form = event.target;
+    
+    let body = {}
+    for(let input of form) {
+        let key = input.name; 
+        if (key == ""){
+            continue;
+        }
+        let value = input.value;
+        body[key] = value; 
+    }
+
+    let method = "POST";
+    let URL = "http://localhost:9000/products/";
+    let callback = getProducts;
+    let headers = {
+        "Content-Type": "application/json"
+    }
+
+    httpRequest(method, URL, callback, headers, JSON.stringify(body));
+    return false;
+}
+
 getProducts();
-// comment
+
