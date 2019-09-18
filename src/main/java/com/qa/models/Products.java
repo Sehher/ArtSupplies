@@ -16,6 +16,7 @@ public class Products {
     private String name;
     private String category;
     private String description;
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -49,8 +50,11 @@ public class Products {
         this.description = description;
     }
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
 
-
-
-
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

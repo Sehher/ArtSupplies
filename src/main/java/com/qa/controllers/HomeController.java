@@ -8,40 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin()
+@CrossOrigin("*")
 public class HomeController {
-
-    @Autowired
-    ProductRepository pr;
 
     @RequestMapping("/")
     public String home(){
-        return "Index";
+        return "helloWorld";
     }
-
-    @RequestMapping(value = "products", method = RequestMethod.GET)
-    public List<Products> listAllProducts(){
-        return pr.findAll();
-    }
-
-    @RequestMapping(value = "products",method = RequestMethod.POST)
-    public Products addNote(@RequestBody Products products){
-            return pr.saveAndFlush(products);
-    }
-
-    //DeleteProduct
-    @RequestMapping(value = "product/{id}", method = RequestMethod.DELETE)
-    public Products deleteProductFromList(@PathVariable Long id){
-        Products existing = pr.findOne(id);
-        pr.delete(existing);
-        return existing;
-    }
-
-
-
-
-
-
-
 
 }
