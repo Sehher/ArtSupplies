@@ -96,7 +96,7 @@ function printCard(request) {
         cardFooter.setAttribute("class","card-footer");
         let button = document.createElement("button");
         button.type = "button";
-        button.setAttribute("class", "btn-success");
+        button.setAttribute("class", "btn btn-success");
         button.setAttribute("onclick", "deleteProduct("+product.id+")")
 
         let header5 = document.createElement("h5");
@@ -105,6 +105,18 @@ function printCard(request) {
 
         button.appendChild(header5);
         cardFooter.appendChild(button);
+
+        let button2 = document.createElement("button");
+        button2.type = "button";
+        button2.setAttribute("class", "btn btn-secondary");
+        button2.setAttribute("onclick", "updateProduct("+product.id+")")
+
+        let p = document.createElement("p");
+        p.setAttribute("class", "update")
+        p.innerText = "Edit";
+
+        button2.appendChild(p);
+        cardFooter.appendChild(button2);
 
 
         productElement.appendChild(horizontalCard);
@@ -156,6 +168,28 @@ function createProduct(event){
 
     httpRequest(method, URL, callback, headers, JSON.stringify(body));
     return false;
+}
+
+function updateProduct(event){
+
+    let form = event.target;
+    let body = {}
+    for(let input of form) {
+        let key = input.name; 
+        if (key == ""){
+            continue;
+        }
+        let value = input.value;
+        body[key] = value; 
+    }
+
+    let method = "PUT";
+    let URL = "http://localhost:9000/products/"+id;
+    let callback = getProducts;
+    let headers = {
+        "Content-Type": "application/json"
+    }
+    httpRequest(method, URL, callback, headers);
 }
 
 getProducts();

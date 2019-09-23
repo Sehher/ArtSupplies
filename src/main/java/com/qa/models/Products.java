@@ -18,6 +18,18 @@ public class Products {
     private String description;
     private String imageUrl;
 
+    public Products(){
+        super();
+    }
+    public Products(String name, String category, String description, String imageUrl){
+
+        super();
+        this.category = category;
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
     public Long getId() {
         return id;
     }
@@ -57,4 +69,14 @@ public class Products {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    public void setProducts(Products products){
+
+        this.name = products.name;
+        this.category = products.category;
+        this.description = products.description;
+        this.imageUrl = products.imageUrl;
+    }
+
+
 }

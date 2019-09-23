@@ -21,7 +21,12 @@ public class ProductsService {
         return productRepository.saveAndFlush(products);
     }
 
-    public Products updateProduct(Long id){return productRepository.findOne(id);}
+    public Products getProducts(Long id) {return productRepository.findOne(id);}
+
+    public Products updateProduct(Long id,Products products){
+        Products ex = productRepository.findOne(id);
+        ex.setProducts(products);
+        return  ex;}
 
     public Products deleteProduct( Long id){
         Products existing = productRepository.findOne(id);

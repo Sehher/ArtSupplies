@@ -4,6 +4,7 @@ import com.qa.models.Products;
 import com.qa.repository.ProductRepository;
 import com.qa.service.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,8 +28,15 @@ public class ProductsController {
 
     @RequestMapping(value = "products/{id}", method = RequestMethod.GET)
     public Products getProducts(@PathVariable Long id){
-        return productsService.updateProduct(id);
+        return productsService.getProducts(id);
     }
+
+    @Transactional
+    @RequestMapping(value = "products/{id}", method = RequestMethod.PUT)
+    public Products updateProducts(@PathVariable Long id, @RequestBody Products products){
+        return productsService.updateProduct(id, products);
+    }
+
 
     @RequestMapping(value = "products/{id}", method = RequestMethod.DELETE)
     public Products deleteProductFromList(@PathVariable Long id){

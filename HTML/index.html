@@ -55,6 +55,45 @@
                             <button type="button" class="btn btn-success" id="mybtn" onClick="myfunc()">
                                 <h5 class="added">+</h5>
                             </button>
+                            <button type="button" class="btn btn-success" id="mybtn2" data-toggle="modal" data-target="#myModal">
+                                <p class="update">Update</p>
+                            </button>
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                
+                                  <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">x</button>
+                                    </div>
+                                    <div class="modal-body">
+                                            <form onsubmit="return updateProduct(id)">
+                                                    <div class="form-group">
+                                                        <label for="exampleName">Product Name</label>
+                                                        <input class="form-control" name="name" id="InputName" placeholder="Product Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputCategory">Category</label>
+                                                        <input class="form-control" name="category" id="InputCategory" placeholder="Product Category">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputCategory">Description</label>
+                                                        <input class="form-control" name="description" id="InputDescription" placeholder="Product Description">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputCategory">Image Link</label>
+                                                        <input type="URL" class="form-control" name="imageUrl" id="InputImageLink" placeholder="Image URL">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </form>
+                                            </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                              
+                            </div>
                             <br>
                             
                         </div>
