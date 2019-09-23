@@ -25,6 +25,11 @@ public class ProductsController {
         return productsService.addProduct(products);
     }
 
+    @RequestMapping(value = "products/{id}", method = RequestMethod.GET)
+    public Products getProducts(@PathVariable Long id){
+        return productsService.updateProduct(id);
+    }
+
     @RequestMapping(value = "products/{id}", method = RequestMethod.DELETE)
     public Products deleteProductFromList(@PathVariable Long id){
        return productsService.deleteProduct(id);

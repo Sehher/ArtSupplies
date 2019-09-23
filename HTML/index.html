@@ -38,7 +38,7 @@
                         <div class="card-horizontal">
                             <div class="img-square-wrapper">
                                 <!-- apply css as .img-square-wrapper img {width:200px;height:200px;} -->
-                                <img src="https://cdn.shopify.com/s/files/1/1751/8993/products/galeria60ml.jpg?v=1509463939"
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/71GmqH1-0vL._SL1000_.jpg"
                                 alt="Card image cap">
                             </div>
                             <div class="card-body">
@@ -63,25 +63,42 @@
                 </div>
             </div>
             <br>
-            <form onsubmit="return createProduct(event)">
-                    <div class="form-group">
-                        <label for="exampleName">Product Name</label>
-                        <input class="form-control" name="name" id="InputName" placeholder="Product Name">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Product</button>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">x</button>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputCategory">Category</label>
-                        <input class="form-control" name="category" id="InputCategory" placeholder="Product Category">
+                    <div class="modal-body">
+                            <form onsubmit="return createProduct(event)">
+                                    <div class="form-group">
+                                        <label for="exampleName">Product Name</label>
+                                        <input class="form-control" name="name" id="InputName" placeholder="Product Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Category</label>
+                                        <input class="form-control" name="category" id="InputCategory" placeholder="Product Category">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Description</label>
+                                        <input class="form-control" name="description" id="InputDescription" placeholder="Product Description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Image Link</label>
+                                        <input type="URL" class="form-control" name="imageUrl" id="InputImageLink" placeholder="Image URL">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputCategory">Description</label>
-                        <input class="form-control" name="description" id="InputDescription" placeholder="Product Description">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputCategory">Image Link</label>
-                        <input type="URL" class="form-control" name="imageUrl" id="InputImageLink" placeholder="Image URL">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                  </div>
+                  
+                </div>
+              </div>
+              
             </div>
         </center>
         

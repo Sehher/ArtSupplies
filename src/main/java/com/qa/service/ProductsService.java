@@ -17,9 +17,11 @@ public class ProductsService {
         return productRepository.findAll();
     }
 
-    public Products addProduct( Products products){
+    public Products addProduct(Products products){
         return productRepository.saveAndFlush(products);
     }
+
+    public Products updateProduct(Long id){return productRepository.findOne(id);}
 
     public Products deleteProduct( Long id){
         Products existing = productRepository.findOne(id);
