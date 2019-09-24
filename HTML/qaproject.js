@@ -109,7 +109,8 @@ function printCard(request) {
         let button2 = document.createElement("button");
         button2.type = "button";
         button2.setAttribute("class", "btn btn-secondary");
-        button2.setAttribute("onclick", "updateProduct("+product.id+")")
+        button2.setAttribute("data-toggle", "modal");
+        button2.setAttribute("data-target","#myModal");
 
         let p = document.createElement("p");
         p.setAttribute("class", "update")
@@ -117,6 +118,8 @@ function printCard(request) {
 
         button2.appendChild(p);
         cardFooter.appendChild(button2);
+
+
 
 
         productElement.appendChild(horizontalCard);
@@ -170,18 +173,18 @@ function createProduct(event){
     return false;
 }
 
-function updateProduct(event){
+function updateProduct(id){
 
-    let form = event.target;
-    let body = {}
-    for(let input of form) {
-        let key = input.name; 
-        if (key == ""){
-            continue;
-        }
-        let value = input.value;
-        body[key] = value; 
-    }
+    // let form = event.target;
+    // let body = {}
+    // for(let input of form) {
+    //     let key = input.name; 
+    //     if (key == ""){
+    //         continue;
+    //     }
+    //     let value = input.value;
+    //     body[key] = value; 
+    // }
 
     let method = "PUT";
     let URL = "http://localhost:9000/products/"+id;
@@ -189,7 +192,8 @@ function updateProduct(event){
     let headers = {
         "Content-Type": "application/json"
     }
-    httpRequest(method, URL, callback, headers);
+    httpRequest(method, URL, callback, headers,JSON.stringify(body));
+    return false;
 }
 
 getProducts();
