@@ -74,7 +74,7 @@ function printCard(request) {
 
         let category = document.createElement("li");
         category.setAttribute("class", "list-group-item");
-        category.innerText = product.category;
+        category.innerText = "ID: " + product.id + " - " + product.category;
 
         let description = document.createElement("li");
         description.setAttribute("class", "list-group-item");
@@ -96,7 +96,7 @@ function printCard(request) {
         cardFooter.setAttribute("class","card-footer");
         let button = document.createElement("button");
         button.type = "button";
-        button.setAttribute("class", "btn btn-success");
+        button.setAttribute("class", "btn btn-danger");
         button.setAttribute("onclick", "deleteProduct("+product.id+")")
 
         let header5 = document.createElement("h5");
@@ -110,16 +110,20 @@ function printCard(request) {
         button2.type = "button";
         button2.setAttribute("class", "btn btn-secondary");
         button2.setAttribute("data-toggle", "modal");
-        button2.setAttribute("data-target","#myModal");
-
+        button2.setAttribute("data-target","#editModal");
         let p = document.createElement("p");
+       
+        
         p.setAttribute("class", "update")
-        p.innerText = "Edit";
+        p.innerText = "Edit Product";
+        button2.innerText = product.id;
+
+        
 
         button2.appendChild(p);
         cardFooter.appendChild(button2);
 
-
+        
 
 
         productElement.appendChild(horizontalCard);
@@ -173,28 +177,36 @@ function createProduct(event){
     return false;
 }
 
-function updateProduct(id){
+function updateProduct(event){
 
-    // let form = event.target;
-    // let body = {}
-    // for(let input of form) {
-    //     let key = input.name; 
-    //     if (key == ""){
-    //         continue;
-    //     }
-    //     let value = input.value;
-    //     body[key] = value; 
-    // }
-
+    let form = event.target;
+    let body = {}
+    let URL;
+    for(let input of form) {
+        let key = input.name; 
+        if (key == ""){
+            continue;
+        }
+        if (key == "productid"){
+            URL = "http://localhost:9000/products/"+input.value;
+            continue;
+        }
+        let value = input.value;
+        body[key] = value; 
+    }
+    console.log(body);
+    // let id = 4;
     let method = "PUT";
-    let URL = "http://localhost:9000/products/"+id;
+    //let URL = "http://localhost:9000/products/"+form.input.name.productid;
     let callback = getProducts;
+    //console.log(JSON.parse(callback));
     let headers = {
         "Content-Type": "application/json"
     }
     httpRequest(method, URL, callback, headers,JSON.stringify(body));
     return false;
 }
+
 
 getProducts();
 

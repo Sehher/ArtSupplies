@@ -48,6 +48,7 @@
                                     <!-- apply bold in styles -->
                                     <li class="list-group-item" id="category"><b></b></li>
                                     <li class="list-group-item" id="description"><b></b></li>
+                                    <li class="list-group-item" id="idNum"><b></b></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,45 +56,10 @@
                             <button type="button" class="btn btn-success" id="mybtn" onClick="myfunc()">
                                 <h5 class="added">+</h5>
                             </button>
-                            <button type="button" class="btn btn-success" id="mybtn2" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn btn-success" id="mybtn2" data-toggle="modal" data-target="#editModal">
                                 <p class="update">Update</p>
                             </button>
-                            <div class="modal fade" id="myModal" role="dialog">
-                                <div class="modal-dialog">
-                                
-                                  <!-- Modal content-->
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <button type="button" class="close" data-dismiss="modal">x</button>
-                                    </div>
-                                    <div class="modal-body">
-                                            <form onsubmit="return updateProduct(id)">
-                                                    <div class="form-group">
-                                                        <label for="exampleName">Product Name</label>
-                                                        <input class="form-control" name="name" id="InputName" placeholder="Product Name">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputCategory">Category</label>
-                                                        <input class="form-control" name="category" id="InputCategory" placeholder="Product Category">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputCategory">Description</label>
-                                                        <input class="form-control" name="description" id="InputDescription" placeholder="Product Description">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputCategory">Image Link</label>
-                                                        <input type="URL" class="form-control" name="imageUrl" id="InputImageLink" placeholder="Image URL">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                </form>
-                                            </div>
-                                    </div>
-                                  </div>
-                                  
-                                </div>
-                              </div>
-                              
-                            </div>
+                            
                             <br>
                             
                         </div>
@@ -102,6 +68,46 @@
                 </div>
             </div>
             <br>
+            <div class="modal fade" id="editModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">x</button>
+                    </div>
+                    <div class="modal-body">
+                            <form onsubmit="return updateProduct(event, id)">
+                                <div class="form-group">
+                                    <label for="exampleName">id</label>
+                                    <input class="form-control" name="productid" id="Inputid" placeholder="Enter product ID">
+                                </div>
+                                    <div class="form-group">
+                                        <label for="exampleName">Product Name</label>
+                                        <input class="form-control" name="name" id="InputName2" placeholder="Product Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Category</label>
+                                        <input class="form-control" name="category" id="InputCategory2" placeholder="Product Category">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Description</label>
+                                        <input class="form-control" name="description" id="InputDescription2" placeholder="Product Description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputCategory">Image Link</label>
+                                        <input type="URL" class="form-control" name="imageUrl" id="InputImageLink2" placeholder="Image URL">
+                                    </div>
+                                    <button type="submit" class="btn btn-light">Submit</button>
+                                </form>
+                            </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Product</button>
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -140,8 +146,9 @@
               
             </div>
             <br>
-        </center>
-        
+        </div>
+    </center>
+    
         
         
     <script src="qaproject.js"></script>
