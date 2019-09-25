@@ -99,11 +99,11 @@ function printCard(request) {
         button.setAttribute("class", "btn btn-danger");
         button.setAttribute("onclick", "deleteProduct("+product.id+")")
 
-        let header5 = document.createElement("h5");
-        header5.setAttribute("class", "added")
-        header5.innerText = "-";
+        let p1 = document.createElement("p");
+        p1.setAttribute("class", "added")
+        p1.innerText = "Delete";
 
-        button.appendChild(header5);
+        button.appendChild(p1);
         cardFooter.appendChild(button);
 
         let button2 = document.createElement("button");
@@ -116,7 +116,6 @@ function printCard(request) {
         
         p.setAttribute("class", "update")
         p.innerText = "Edit Product";
-        button2.innerText = product.id;
 
         
 
@@ -129,6 +128,9 @@ function printCard(request) {
         productElement.appendChild(horizontalCard);
         productElement.appendChild(cardFooter);
         list.appendChild(productElement);
+
+        // let brk = document.createElement("br");
+        // list.appendChild(brk);
     }
 }
 
