@@ -128,9 +128,6 @@ function printCard(request) {
         productElement.appendChild(horizontalCard);
         productElement.appendChild(cardFooter);
         list.appendChild(productElement);
-
-        // let brk = document.createElement("br");
-        // list.appendChild(brk);
     }
 }
 
