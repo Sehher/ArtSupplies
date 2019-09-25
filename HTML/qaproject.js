@@ -112,17 +112,11 @@ function printCard(request) {
         button2.setAttribute("data-toggle", "modal");
         button2.setAttribute("data-target","#editModal");
         let p = document.createElement("p");
-       
-        
         p.setAttribute("class", "update")
         p.innerText = "Edit Product";
 
-        
-
         button2.appendChild(p);
         cardFooter.appendChild(button2);
-
-        //need break between cards
 
 
         productElement.appendChild(horizontalCard);
