@@ -122,7 +122,7 @@ function printCard(request) {
         button2.appendChild(p);
         cardFooter.appendChild(button2);
 
-        
+        //need break between cards
 
 
         productElement.appendChild(horizontalCard);
