@@ -22,7 +22,7 @@ public class ProductsController {
     }
 
     @RequestMapping(value = "products",method = RequestMethod.POST)
-    public Products addNote(@RequestBody Products products){
+    public Products addProducts(@RequestBody Products products){
         return productsService.addProduct(products);
     }
 
