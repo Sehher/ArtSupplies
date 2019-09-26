@@ -2,6 +2,7 @@ package com.qa.controller;
 
 import com.qa.controllers.HomeController;
 import com.qa.controllers.ProductsController;
+import com.qa.service.ProductsService;
 import com.qa.models.Products;
 import com.qa.repository.ProductRepository;
 import org.junit.Test;
@@ -54,7 +55,7 @@ public class ProductsControllerTest {
     }
 
     @Test
-    public void testGetProduct() {
+    public void testGetProducts() {
         Products products = new Products();
         products.setDescription("Slow drying paint");
         products.setName("oil paint");
