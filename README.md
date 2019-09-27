@@ -49,3 +49,14 @@ For the HTML repository, Codacy gave a C grade with 8 issues (2 code style, 3 er
 
 <https://app.codacy.com/manual/Sehher/ArtSuppliesHTML/dashboard?bid=14452654>
 <https://app.codacy.com/manual/Sehher/ArtSupplies/dashboard?bid=14200106>
+
+### Tools Used
+
+- Version Control - GitHub
+- IDE and language – IntelliJ with Java
+- Database – H2
+- Front End – HTML, CSS, JavaScript 
+- Continuous Integration – Jenkins, Google Cloud
+- Testing – Junit, Selenium
+- Task Management – Trello 
+
