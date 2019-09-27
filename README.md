@@ -20,9 +20,13 @@ In the future, I would like to add a relational table so that I could have a sep
 Also originally, I wanted to separate the products into categories and would like to implement this sort function in the future.
 
 ### Wireframes
+These are the initial wireframes and hopefully a guide for the future look of the application.
 
 Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe1.png)
+
+Inline-style: 
+![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe2.png)
 
 ### Codacy
 
