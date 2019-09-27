@@ -1,6 +1,8 @@
 # Solo Project
 ## My Art Supplies
 
+##### Please refer to the front end branch for the full API
+
 ### Aim
 To create a website with create, read, update and delete functionality 
 
