@@ -60,6 +60,10 @@ In the future, I would like to add a relational table so that I could have a sep
 
 Also originally, I wanted to separate the products into categories and would like to implement this sort function in the future.
 
+### Links
+
+<https://trello.com/b/JXdDnYPs/personal-project>
+
 ### Acknowledgments
 
 Thank you to the trainers and my fellow trainees who have helped me throughout this project.
