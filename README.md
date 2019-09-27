@@ -1,7 +1,7 @@
 # Solo Project
 ## My Art Supplies
 
-##### Please refer to the front end branch for the full API
+##### Please refer to the frontend branch for the full API
 
 ### Aim
 To create a website with create, read, update and delete functionality 
@@ -34,3 +34,6 @@ Inline-style:
 
 Codacy came back with a B grade for the ArtSupplies git repository. There were 22 issues with 21 being a problem with code style.
 For the HTML repository, Codacy gave a C grade with 8 issues (2 code style, 3 error prone, 3 security).
+
+<https://app.codacy.com/manual/Sehher/ArtSuppliesHTML/dashboard?bid=14452654>
+<https://app.codacy.com/manual/Sehher/ArtSupplies/dashboard?bid=14200106>
