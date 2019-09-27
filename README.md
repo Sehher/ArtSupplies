@@ -19,3 +19,7 @@ In the future, I would like to add a relational table so that I could have a sep
 
 Also originally, I wanted to separate the products into categories and would like to implement this sort function in the future.
 
+### Codacy
+
+Codacy came back with a B grade for the ArtSupplies git repository. There were 22 issues with 21 being a problem with code style.
+For the HTML repository, Codacy gave a C grade with 8 issues (2 code style, 3 error prone, 3 security).
