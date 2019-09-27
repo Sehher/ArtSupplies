@@ -24,26 +24,22 @@ Also originally, I wanted to separate the products into categories and would lik
 ### Wireframes
 These are the initial wireframes and hopefully a guide for the future look of the application.
 
-Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe1.png)
 
-Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe2.png)
 
 ### My Website Now
 
 The main page:
-Inline-style: 
+
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/frontpage.png)
 
 The modal which pops up after clicking the create button:
 
-Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/create.png)
 
 The modal which pops up after clicking the update button:
 
-Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/update.png)
 
 ### Codacy
