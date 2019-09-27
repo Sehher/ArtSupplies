@@ -13,3 +13,9 @@ Selenium testing was done in a separate repository.
 
 ### Front End 
 My HTML and JS files were initially in this repository, however was moved to a new repository (<https://github.com/Sehher/ArtSuppliesHTML.git>)
+
+### Future Application Improvements
+In the future, I would like to add a relational table so that I could have a separate list which is my list and separate from a general supply list. I would also like to improve the update function, so that it isn't necessary to input an ID in order to edit. Currently, it is possible to input the same product several times, this is something I would like to prevent.
+
+Also originally, I wanted to separate the products into categories and would like to implement this sort function in the future.
+
