@@ -35,10 +35,14 @@ Inline-style:
 The main page:
 Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/frontpage.png)
+
 The modal which pops up after clicking the create button:
+
 Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/create.png)
+
 The modal which pops up after clicking the update button:
+
 Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/update.png)
 
