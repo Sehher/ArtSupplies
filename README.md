@@ -30,6 +30,18 @@ Inline-style:
 Inline-style: 
 ![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe2.png)
 
+### My Website Now
+
+The main page:
+Inline-style: 
+![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/frontpage.png)
+The modal which pops up after clicking the create button:
+Inline-style: 
+![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/create.png)
+The modal which pops up after clicking the update button:
+Inline-style: 
+![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/update.png)
+
 ### Codacy
 
 Codacy came back with a B grade for the ArtSupplies git repository. There were 22 issues with 21 being a problem with code style.
