@@ -19,6 +19,11 @@ In the future, I would like to add a relational table so that I could have a sep
 
 Also originally, I wanted to separate the products into categories and would like to implement this sort function in the future.
 
+### Wireframes
+
+Inline-style: 
+![alt text](https://github.com/Sehher/ArtSupplies/blob/master/Images/wireframe1.png)
+
 ### Codacy
 
 Codacy came back with a B grade for the ArtSupplies git repository. There were 22 issues with 21 being a problem with code style.
